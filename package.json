@@ -1,0 +1,25 @@
+{
+  "name": "chrome-extension-cli",
+  "version": "1.0.0",
+  "description": "chrome拓展开发",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cleves0315/chrome-extension-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cleves0315/chrome-extension-cli/issues"
+  },
+  "homepage": "https://github.com/cleves0315/chrome-extension-cli#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

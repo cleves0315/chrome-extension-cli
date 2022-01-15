@@ -1,2 +1,2 @@
 # chrome-extension-cli
-chrome拓展开发
+chrome拓展脚手架
