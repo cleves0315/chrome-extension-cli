@@ -4,7 +4,7 @@ module.exports = {
   mode: 'development',
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
   module: {
@@ -14,19 +14,20 @@ module.exports = {
         test: /\.(css|scss)$/,
         // in the `src` directory
         use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
+          'style-loader',
+          'css-loader',
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
-          },
+          }
         ],
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ]
   }
