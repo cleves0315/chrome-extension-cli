@@ -1,10 +1,11 @@
 {
   "name": "chrome-extension-cli",
   "version": "1.0.0",
-  "description": "chrome拓展开发",
+  "description": "chrome拓展脚手架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "webpack watch",
+    "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,9 @@
   "devDependencies": {
     "@types/chrome": "^0.0.176",
     "css-loader": "^6.5.1",
+    "eslint": "^8.6.0",
+    "eslint-plugin-import": "^2.25.4",
+    "prettier": "^2.5.1",
     "sass": "^1.48.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",

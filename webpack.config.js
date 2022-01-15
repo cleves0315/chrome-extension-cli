@@ -21,7 +21,7 @@ module.exports = {
             options: {
               sourceMap: true,
             },
-          }
+          },
         ],
       },
       {
@@ -29,6 +29,6 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-    ]
-  }
-}
+    ],
+  },
+};

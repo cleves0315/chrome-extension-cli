@@ -3,11 +3,13 @@ interface user {
   age: number
 }
 
-const xiaoming = <user> {
+const xiaoming = <user>{
   name: 'xiaoming',
   age: 12
 }
 
-export {
-  xiaoming
+function aaa(name: string) {
+  console.log(name)
 }
+
+export { xiaoming }

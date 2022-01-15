@@ -1,7 +1,7 @@
-import { xiaoming } from './js/index.ts'
-import './css/index.scss'
+import { xiaoming } from './js/index.ts';
+import './css/index.scss';
 
-const a = 'a'
+const a = 'a';
 
-console.log(a)
-console.log(xiaoming)
+console.log(a);
+console.log(xiaoming);
