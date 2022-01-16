@@ -1,3 +1,3 @@
 # chrome-extension-cli
 
-chrome拓展脚手架
+chrome 拓展脚手架

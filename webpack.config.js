@@ -1,5 +1,6 @@
+process.env.NODE_ENV = 'production';
+process.env.BABEL_ENV = 'production';
 const path = require('path');
-
 const fileExtensions = [
   'jpg',
   'jpeg',
@@ -20,6 +21,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
+  resolve: {
+    extensions: fileExtensions
+      .map((extension) => '.' + extension)
+      .concat(['.js', '.ts', '.tsx', '.css']),
+  },
   module: {
     rules: [
       {
@@ -36,20 +42,24 @@ module.exports = {
         ],
       },
       {
+        test: new RegExp('.(' + fileExtensions.join('|') + ')$'),
+        type: 'asset/resource',
+        exclude: /node_modules/,
+        generator: {
+          filename: 'img/[name].[ext]'
+        }
+      },
+      {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: ['ts-loader'],
+        // use: ['babel-loader', 'ts-loader'],
         exclude: /node_modules/,
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         use: ['source-map-loader', 'babel-loader'],
         exclude: /node_modules/,
       },
     ],
-  },
-  resolve: {
-    extensions: fileExtensions
-      .map((extension) => '.' + extension)
-      .concat(['.js', '.jsx', '.ts', '.tsx', '.css']),
   },
 };

@@ -1,15 +1,15 @@
 interface user {
-  name: string
-  age: number
+  name: string;
+  age: number;
 }
 
-const xiaoming = <user>{
+const xiaoming = {
   name: 'xiaoming',
-  age: 12
-}
+  age: 12,
+} as user;
 
 function aaa(name: string) {
-  console.log(name)
+  console.log(name);
 }
 
-export { xiaoming }
+export { xiaoming };
