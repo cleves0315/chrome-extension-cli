@@ -1,6 +1,8 @@
 process.env.NODE_ENV = 'production';
 process.env.BABEL_ENV = 'production';
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fileExtensions = [
   'jpg',
   'jpeg',
@@ -52,7 +54,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: ['ts-loader'],
-        use: ['source-map-loader', 'babel-loader', 'ts-loader'],
+        // use: ['source-map-loader', 'babel-loader', 'ts-loader'],
         exclude: /node_modules/,
       },
       {
@@ -60,6 +62,27 @@ module.exports = {
         use: ['source-map-loader', 'babel-loader'],
         exclude: /node_modules/,
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      }
     ],
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/manifest.json',
+          to: path.join(__dirname, 'dist'),
+          force: true,
+        },
+      ],
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'index.html'),
+      filename: 'index.html',
+      chunks: ['index'],
+      cache: false,
+    }),
+  ]
 };
