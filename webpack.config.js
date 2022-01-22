@@ -3,6 +3,7 @@ process.env.BABEL_ENV = 'production';
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const fileExtensions = [
   'jpg',
   'jpeg',
