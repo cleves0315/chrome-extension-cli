@@ -4,6 +4,7 @@
   "description": "chrome拓展脚手架",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "watch": "webpack watch",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
