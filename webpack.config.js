@@ -23,12 +23,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-  },
-  resolve: {
-    extensions: fileExtensions
-      .map((extension) => '.' + extension)
-      .concat(['.js', '.ts', '.tsx', '.css']),
-  },
+  },  
   module: {
     rules: [
       {
@@ -68,6 +63,11 @@ module.exports = {
         loader: "html-loader",
       }
     ],
+  },
+  resolve: {
+    extensions: fileExtensions
+      .map((extension) => '.' + extension)
+      .concat(['.js', '.ts', '.tsx', '.css']),
   },
   plugins: [
     new CopyWebpackPlugin({
