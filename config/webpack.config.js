@@ -1,8 +1,9 @@
 process.env.NODE_ENV = 'production';
 process.env.BABEL_ENV = 'production';
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path')
+const webpack = require('wepack')
+const HtmlWebpackPlugin= require('html-webpack-plugin');
+const CopyWebpackPlugin=require('copy-webpack-plugin')
 
 const fileExtensions = [
   'jpg',
@@ -70,6 +71,7 @@ module.exports = {
       .concat(['.js', '.ts', '.tsx', '.css']),
   },
   plugins: [
+    new webpack.ProgressPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
