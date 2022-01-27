@@ -57,16 +57,5 @@
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.3"
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "plugin:flowtype/recommended",
-      "plugin:jsx-a11y/recommended"
-    ],
-    "plugins": [
-      "flowtype",
-      "jsx-a11y"
-    ]
   }
 }
