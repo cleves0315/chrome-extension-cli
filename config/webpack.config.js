@@ -2,8 +2,8 @@ process.env.NODE_ENV = 'production';
 process.env.BABEL_ENV = 'production';
 const path = require('path')
 const webpack = require('wepack')
-const HtmlWebpackPlugin= require('html-webpack-plugin');
-const CopyWebpackPlugin=require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const fileExtensions = [
   'jpg',
@@ -15,16 +15,16 @@ const fileExtensions = [
   'svg',
   'ttf',
   'woff',
-  'woff2',
-];
+  'woff2'
+]
 
 module.exports = {
   mode: 'development',
   entry: './src/main.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
-  },  
+    filename: 'main.js'
+  },
   module: {
     rules: [
       {
