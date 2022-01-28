@@ -1,7 +1,5 @@
-process.env.NODE_ENV = 'production';
-process.env.BABEL_ENV = 'production';
 const path = require('path');
-const webpack = require('wepack');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -50,8 +48,8 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: ['ts-loader'],
-        // use: ['source-map-loader', 'babel-loader', 'ts-loader'],
+        // use: ['ts-loader'],
+        use: ['source-map-loader', 'babel-loader', 'ts-loader'],
         exclude: /node_modules/,
       },
       {
@@ -68,7 +66,7 @@ module.exports = {
   resolve: {
     extensions: fileExtensions
       .map(extension => '.' + extension)
-      .concat(['.js', '.ts', '.tsx', '.css']),
+      .concat(['.js', '.ts', '.tsx']),
   },
   plugins: [
     new webpack.ProgressPlugin(),
