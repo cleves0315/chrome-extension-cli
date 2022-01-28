@@ -23,6 +23,7 @@ module.exports = {
     popup: path.join(__dirname, 'src', 'pages', 'Popup', 'index.tsx'),
     content: path.join(__dirname, 'src', 'pages', 'Content', 'index.tsx'),
     options: path.join(__dirname, 'src', 'pages', 'Options', 'index.tsx'),
+    background: path.join(__dirname, 'src', 'pages', 'Background', 'index.ts'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
