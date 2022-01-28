@@ -17,7 +17,7 @@ const fileExtensions = [
 ];
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV || 'development',
   entry: './src/main.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
