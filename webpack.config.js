@@ -1,8 +1,9 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackBar = require('webpackbar');
+
+const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 const fileExtensions = [
   'jpg',
@@ -29,6 +30,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].bundle.js',
     clean: true,
+    publicPath: ASSET_PATH,
   },
   module: {
     rules: [
@@ -89,7 +91,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.join(__dirname, 'src', 'assets', 'icon-16.png'),
+          from: path.join(__dirname, 'src', 'assets', 'img', 'icon-16.png'),
           to: path.join(__dirname, 'dist'),
           force: true,
         },
@@ -98,7 +100,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.join(__dirname, 'src', 'assets', 'icon-19.png'),
+          from: path.join(__dirname, 'src', 'assets', 'img', 'icon-19.png'),
           to: path.join(__dirname, 'dist'),
           force: true,
         },
@@ -107,7 +109,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.join(__dirname, 'src', 'assets', 'icon-38.png'),
+          from: path.join(__dirname, 'src', 'assets', 'img', 'icon-38.png'),
           to: path.join(__dirname, 'dist'),
           force: true,
         },
@@ -116,7 +118,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.join(__dirname, 'src', 'assets', 'icon-64.png'),
+          from: path.join(__dirname, 'src', 'assets', 'img', 'icon-64.png'),
           to: path.join(__dirname, 'dist'),
           force: true,
         },
@@ -125,7 +127,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.join(__dirname, 'src', 'assets', 'icon-128.png'),
+          from: path.join(__dirname, 'src', 'assets', 'img', 'icon-128.png'),
           to: path.join(__dirname, 'dist'),
           force: true,
         },
