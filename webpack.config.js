@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackBar = require('webpackbar');
 
 const fileExtensions = [
   'jpg',
@@ -69,7 +70,7 @@ module.exports = {
       .concat(['.js', '.ts', '.tsx']),
   },
   plugins: [
-    new webpack.ProgressPlugin(),
+    new WebpackBar(),
     new CopyWebpackPlugin({
       patterns: [
         {
