@@ -19,10 +19,15 @@ const fileExtensions = [
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
-  entry: './src/main.tsx',
+  entry: {
+    popup: path.join(__dirname, 'src', 'pages', 'Popup', 'index.tsx'),
+    content: path.join(__dirname, 'src', 'pages', 'Content', 'index.tsx'),
+    options: path.join(__dirname, 'src', 'pages', 'Options', 'index.tsx'),
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: '[name].[contenthash].bundle.js',
+    clean: true,
   },
   module: {
     rules: [
@@ -80,10 +85,67 @@ module.exports = {
         },
       ],
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src', 'assets', 'icon-16.png'),
+          to: path.join(__dirname, 'dist'),
+          force: true,
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src', 'assets', 'icon-19.png'),
+          to: path.join(__dirname, 'dist'),
+          force: true,
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src', 'assets', 'icon-38.png'),
+          to: path.join(__dirname, 'dist'),
+          force: true,
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src', 'assets', 'icon-64.png'),
+          to: path.join(__dirname, 'dist'),
+          force: true,
+        },
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src', 'assets', 'icon-128.png'),
+          to: path.join(__dirname, 'dist'),
+          force: true,
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
-      filename: 'index.html',
-      chunks: ['index'],
+      template: path.join(__dirname, 'src', 'pages', 'Popup', 'index.html'),
+      filename: 'popup.html',
+      chunks: ['popup'],
+      cache: false,
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'pages', 'Content', 'index.html'),
+      filename: 'content.html',
+      chunks: ['content'],
+      cache: false,
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'pages', 'Options', 'index.html'),
+      filename: 'options.html',
+      chunks: ['options'],
       cache: false,
     }),
   ],
