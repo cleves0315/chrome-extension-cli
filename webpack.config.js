@@ -28,7 +28,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].bundle.js',
+    filename: '[name].js',
     clean: true,
     publicPath: ASSET_PATH,
   },
@@ -56,13 +56,12 @@ module.exports = {
         },
       },
       {
-        test: /\.tsx?$/,
-        // use: ['ts-loader'],
-        use: ['source-map-loader', 'babel-loader', 'ts-loader'],
+        test: /\.(ts|tsx)$/,
+        use: ['ts-loader'],
         exclude: /node_modules/,
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         use: ['source-map-loader', 'babel-loader'],
         exclude: /node_modules/,
       },
