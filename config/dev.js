@@ -1,3 +1,4 @@
+process.env.PORT = '3000';
 process.env.NODE_ENV = 'development';
 process.env.BABEL_ENV = 'development';
 
@@ -41,6 +42,4 @@ const runServer = async () => {
   await server.start();
 };
 
-module.exports = {
-  runServer,
-};
+runServer();

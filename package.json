@@ -4,9 +4,9 @@
   "description": "chrome拓展脚手架",
   "main": "index.js",
   "scripts": {
-    "dev": "node bin/start.js",
-    "start": "node bin/start.js",
-    "build": "node bin/build.js",
+    "dev": "node config/dev.js",
+    "start": "node config/dev.js",
+    "build": "node config/prod.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "repository": {

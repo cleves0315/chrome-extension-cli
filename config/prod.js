@@ -14,12 +14,6 @@ webpackConfig.optimization = {
   ],
 };
 
-const build = () => {
-  Webpack(webpackConfig, function (err) {
-    if (err) throw err;
-  });
-};
-
-module.exports = {
-  build,
-};
+Webpack(webpackConfig, function (err) {
+  if (err) throw err;
+});
