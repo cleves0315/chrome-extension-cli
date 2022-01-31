@@ -32,14 +32,18 @@ const devServerOptions = {
   open: true,
 };
 
-// webpackConfig.plugins = [new Webpack.HotModuleReplacementPlugin()].concat(
-//   webpackConfig.plugins || []
-// );
+webpackConfig.plugins = [new Webpack.HotModuleReplacementPlugin()].concat(
+  webpackConfig.plugins || []
+);
 
 const server = new WebpackDevServer(devServerOptions, compiler);
 const runServer = async () => {
   console.log('Starting server...');
   await server.start();
 };
+
+if (process.env.NODE_ENV === 'development' && module.hot) {
+  module.hot.accept();
+}
 
 runServer();
