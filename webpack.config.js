@@ -32,6 +32,9 @@ module.exports = {
     clean: true,
     publicPath: ASSET_PATH,
   },
+  chromeExtensionBoilerplate: {
+    notHotReload: ['contentScript'],
+  },
   module: {
     rules: [
       {

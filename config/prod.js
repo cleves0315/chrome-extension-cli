@@ -14,6 +14,8 @@ webpackConfig.optimization = {
   ],
 };
 
+delete webpackConfig.chromeExtensionBoilerplate;
+
 Webpack(webpackConfig, function (err) {
   if (err) throw err;
 });

@@ -7,11 +7,6 @@ const Webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('../webpack.config.js');
 
-const compiler = Webpack({
-  ...webpackConfig,
-  devtool: 'cheap-module-source-map',
-});
-
 const devServerOptions = {
   https: false,
   hot: false,
@@ -32,9 +27,28 @@ const devServerOptions = {
   open: true,
 };
 
+const options = webpackConfig.chromeExtensionBoilerplate || {};
+const excludeEntriesToHotReload = options.notHotReload || [];
+
+for (var entryName in webpackConfig.entry) {
+  if (excludeEntriesToHotReload.indexOf(entryName) === -1) {
+    webpackConfig.entry[entryName] = [
+      'webpack/hot/dev-server',
+      `webpack-dev-server/client?hot=true&hostname=localhost&port=${process.env.PORT}`,
+    ].concat(webpackConfig.entry[entryName]);
+  }
+}
+
 webpackConfig.plugins = [new Webpack.HotModuleReplacementPlugin()].concat(
   webpackConfig.plugins || []
 );
+
+delete webpackConfig.chromeExtensionBoilerplate;
+
+const compiler = Webpack({
+  ...webpackConfig,
+  devtool: 'cheap-module-source-map',
+});
 
 const server = new WebpackDevServer(devServerOptions, compiler);
 const runServer = async () => {
