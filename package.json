@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/cleves0315/chrome-extension-cli.git"
   },
-  "keywords": [],
+  "keywords": [
+    "chrome extension",
+    "webpack5",
+    "React17",
+    "TypeScript"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {

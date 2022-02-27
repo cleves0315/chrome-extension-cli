@@ -1,8 +1,10 @@
 # chrome-extension-cli
 
 [![npm](https://img.shields.io/npm/v/potato-sign-cli)](https://www.npmjs.com/package/potato-sign-cli)
+[![npm](https://img.shields.io/npm/l/potato-sign-cli.svg)](https://github.com/cleves0315/chrome-extension-cli/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/potato-sign-cli.svg)](https://www.npmjs.com/package/potato-sign-cli)
 
-## Features
+## Introduction
 
 This is a Chrome extension boilerplate that helps you develop and write modern Javascript code modularly and automatically re-refresh the browser when code changes.
 
