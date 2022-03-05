@@ -1,8 +1,7 @@
 {
   "name": "potato-sign-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "chrome拓展程序脚手架",
-  "main": "index.js",
   "scripts": {
     "dev": "node config/dev.js",
     "start": "node config/dev.js",
@@ -19,8 +18,8 @@
     "React17",
     "TypeScript"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Cleves",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cleves0315/chrome-extension-cli/issues"
   },
