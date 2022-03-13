@@ -1,7 +1,7 @@
 {
-  "name": "create-potato-tag",
-  "version": "1.0.2",
-  "description": "chrome拓展程序脚手架",
+  "name": "potato-tag-boilerplate",
+  "version": "1.0.0",
+  "description": "a chrome extension boilerplate",
   "scripts": {
     "dev": "node config/dev.js",
     "start": "node config/dev.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cleves0315/chrome-extension-cli.git"
+    "url": "git+https://github.com/cleves0315/potato-tag-boilerplate.git"
   },
   "keywords": [
     "chrome extension",
@@ -21,9 +21,9 @@
   "author": "Cleves",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cleves0315/chrome-extension-cli/issues"
+    "url": "https://github.com/cleves0315/potato-tag-boilerplate/issues"
   },
-  "homepage": "https://github.com/cleves0315/chrome-extension-cli#readme",
+  "homepage": "https://github.com/cleves0315/potato-tag-boilerplate#readme",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

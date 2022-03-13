@@ -1,8 +1,8 @@
-# create-potato-tag
+# potato-tag-boilerplate
 
-[![npm](https://img.shields.io/npm/v/potato-sign-cli)](https://www.npmjs.com/package/potato-sign-cli)
-[![npm](https://img.shields.io/npm/l/potato-sign-cli.svg)](https://github.com/cleves0315/chrome-extension-cli/blob/main/LICENSE)
-[![npm](https://img.shields.io/npm/dt/potato-sign-cli.svg)](https://www.npmjs.com/package/potato-sign-cli)
+[![npm](https://img.shields.io/npm/v/potato-tag-boilerplate)](https://www.npmjs.com/package/potato-tag-boilerplate)
+[![npm](https://img.shields.io/npm/l/potato-tag-boilerplate.svg)](https://github.com/cleves0315/potato-tag-boilerplate/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/dt/potato-tag-boilerplate.svg)](https://www.npmjs.com/package/potato-tag-boilerplate)
 
 ## Quick Overview
 
