@@ -1,8 +1,15 @@
-# chrome-extension-cli
+# create-potato-sign
 
 [![npm](https://img.shields.io/npm/v/potato-sign-cli)](https://www.npmjs.com/package/potato-sign-cli)
 [![npm](https://img.shields.io/npm/l/potato-sign-cli.svg)](https://github.com/cleves0315/chrome-extension-cli/blob/main/LICENSE)
 [![npm](https://img.shields.io/npm/dt/potato-sign-cli.svg)](https://www.npmjs.com/package/potato-sign-cli)
+
+## Quick Overview
+
+```javascript
+npm install
+npm start
+```
 
 ## Introduction
 
