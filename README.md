@@ -1,4 +1,4 @@
-# create-potato-sign
+# create-potato-tag
 
 [![npm](https://img.shields.io/npm/v/potato-sign-cli)](https://www.npmjs.com/package/potato-sign-cli)
 [![npm](https://img.shields.io/npm/l/potato-sign-cli.svg)](https://github.com/cleves0315/chrome-extension-cli/blob/main/LICENSE)

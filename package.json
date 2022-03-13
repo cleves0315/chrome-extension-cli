@@ -1,5 +1,5 @@
 {
-  "name": "potato-sign-cli",
+  "name": "create-potato-tag",
   "version": "1.0.2",
   "description": "chrome拓展程序脚手架",
   "scripts": {
@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/cleves0315/chrome-extension-cli#readme",
   "dependencies": {
-    "potato-sign-cli": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
